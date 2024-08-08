@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="hibernateorg">
+	<class name="com.beans.Account" table="account">
+		<id name="accno" type="long">
+			<column name="ACCNO" length="5" not-null="true" />
+		</id>
+		<property name="name" type="string">
+			<column name="NAME" length="20" not-null="true" />
+		</property>
+		<property name="balance" type="double">
+			<column name="BALANCE" precision="8" scale="2" not-null="true" />
+		</property>
+		
+	</class>
+
+</hibernate-mapping>
